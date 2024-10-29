@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.griditems{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* Header */
+header {
+    width: 100%;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    position:fixed;
+    z-index: 99;
+    background-color: white;/* Added padding for spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Input */
+input {
+    background-color: black;
+    border: 1px solid azure; 
+    border-radius: 0px;
+    color: azure; 
+    padding: 5px;
+    outline: none;
+}
+
+input:hover {
+    border: 1px solid gray;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: black;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center; /* Center align text in footer */
+}
+
+/* Image inside the footer */
+.dripimg {
+    height: 20%;
+    width: 20%;
+}
+
+.gridimages{
+    margin: 24px;
+    height: 20%;
+    width: 20%;
+}
+
+/* Landing Section */
+.landingsection1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
