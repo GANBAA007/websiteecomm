@@ -6,10 +6,11 @@ body {
     margin: 0;
     padding: 0;
 }
-.griditems{
+.carousel{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+
 }
 /* Header */
 header {
