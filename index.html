@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +20,7 @@
 
 
 <body>
-    <header>
+    <div class="header">
         <div style="justify-content: space-between;">
             <a href="">1</a>
             <a href="">2</a>
@@ -28,55 +30,79 @@
         </div>
         <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK.png" alt="">
         <div>
-
-            <a href="">CART</a>
+            <button onclick="openSlideover()">CART</button>
         </div>
-    </header>
+    </div>
+
     <main>
-        <landingsection1 class="landingsection1" style="margin-bottom: 6px; padding-top:56px ;"> 
+
+        <landingsection1 class="landingsection1" style="margin-bottom:12px;">
             <img class="dripimg" src="/assets/pics/drip (1).jpg" alt="">
             <img class="dripimg" src="/assets/pics/drip (2).jpg" alt="">
             <img class="dripimg" src="/assets/pics/drip (3).jpg" alt="">
             <img class="dripimg" src="/assets/pics/drip (4).jpg" alt="">
-            <img class="dripimg" src="/assets/pics/drip (5).jpg" alt="">
+
         </landingsection1>
+        <div style="font-weight: 600;
+            font-size: x-large;">
+            NEW ARRIVAL
+        </div>
         <new style="margin-bottom: 6px;">
-            <div style="font-weight: 600;
-                        font-size: x-large;">
-                NEW ARRIVAL 
-            </div>
+
             <div class="carousel">
-                <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">                
-                <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
-                <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
+                <div class="swiper-wrapper">
+                    <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (1).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (2).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (3).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (4).jpg" alt="">
+                    <img class="gridimages" src="/assets/pics/drip (5).jpg" alt="">
+                </div>
             </div>
         </new>
+
+
+        <footer>
+            <div style="font-weight: 600; padding-bottom: 12px;">
+                KEEP UPDATED
+            </div>
+            <email class="email" style="padding-bottom: 12px;">
+                <input type="email" id="subemail" name="email">
+            </email>
+            <div style="display: flex; justify-items: end;">© DVRK LLC</div>
+        </footer>
     </main>
-    <footer >
-        <div style="font-weight: 600; padding-bottom: 12px;">
-            KEEP UPDATED
+
+    <div class="slide_over" id="slide_over">
+        <div class="overlay" onclick="closeSlideover()"></div>
+        <div class="content">
+            <div class="header">
+                <p>Cart</p>
+                <p onclick="closeSlideover()">&times;</p>
+            </div>
+            <div class="body">
+                <img src="https://robohash.org/1" alt="">
+                <button>avah</button>
+                <button>xarah</button>
+            </div>
         </div>
-        <email class="email" style="padding-bottom: 12px;">
-            <input type="email" id="subemail" name="email">
-        </email>
-        <div style="display: flex; justify-items: end;">© DVRK LLC</div>
-    </footer>
+    </div>
+
+    <script src="/script.js"></script>
 </body>
+
 </html>
