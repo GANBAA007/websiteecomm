@@ -1,9 +1,21 @@
 * {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-style: italic;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+
 }
 
 body {
@@ -26,16 +38,16 @@ body {
     /* Added padding for spacing */
     /* Ensures padding doesn't affect width */
     padding: 0 1rem;
-        
-    button{
+
+    button {
         outline: none;
         border: none;
         background-color: transparent;
-
     }
-    button:hover{
+
+    button:hover {
         cursor: pointer;
-        
+
     }
 }
 
@@ -52,12 +64,12 @@ main {
     /* justify-content: space-between; */
     overflow-x: auto;
     width: 100%;
-    padding: 1rem;
-
+    padding-top: 1rem;
+    scrollbar-width: none;
     .swiper-wrapper {
         display: flex;
         width: fit-content;
-        gap: 1rem;
+        justify-content: space-between;
 
         .gridimages {
             height: auto;
@@ -113,12 +125,6 @@ a {
     color: black;
 }
 
-@media (max-width: 1024px) {}
-
-@media (max-width: 768px) {}
-
-@media (max-width: 480px) {}
-
 .slide_over {
     position: fixed;
     right: 0;
@@ -152,7 +158,7 @@ a {
         flex-direction: column;
         background-color: white;
         animation: reveal_in_right 500ms linear forwards;
-        
+
 
         .header {
             width: 100%;
@@ -167,17 +173,98 @@ a {
             overflow-y: auto;
             padding: 1rem;
         }
+
     }
+}
+
+.x {
+    cursor: pointer;
 }
 
 .slide_over.closing_slide_over .content {
     animation: hide_in_right 500ms linear forwards;
 }
 
+/* General login form styles */
+#login_form {
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    width: min(70vw, 500px);
+    height: max(30dvh, 200px);
+    z-index: 100;
+    background-color: #000;
+    justify-content: flex-start;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Visible state for the login form */
+#login_form.open_login_form {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Closing state for the login form */
+#login_form.closing_login_form {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Header styling */
+#login_form .header {
+    width: 100%;
+    height: 20%;
+    background-color: azure;
+}
+
+/* Body of the login form */
+#login_form .bodylogin {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Input styling */
+#login_form .bodylogin input {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
+    padding: 5px;
+    outline: none;
+}
+
+/* Input hover effect */
+#login_form .bodylogin input:hover {
+    border: 1px solid gray;
+}
+
+/* Button styling */
+#login_form .bodylogin button {
+    border: 1px solid black;
+    padding: 4px 12px;
+}
+
+/* Button hover effect */
+#login_form .bodylogin button:hover {
+    border: 1px solid gray;
+}
+
+
 @keyframes reveal_in_right {
     from {
         margin-right: -100vw;
     }
+
     to {
         margin-right: 0;
     }
@@ -187,6 +274,7 @@ a {
     from {
         margin-right: 0;
     }
+
     to {
         margin-right: -100vw;
     }

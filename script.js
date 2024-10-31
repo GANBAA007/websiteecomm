@@ -16,6 +16,26 @@ function closeSlideover() {
     }, 500)
 }
 
+const loginform = document.getElementById('login_form');
+
+function openLoginform() {
+    console.log('Opening login form');
+    loginform.classList.add('open_login_form');
+}
+
+function closeLoginform() {
+    loginform.classList.add('closing_login_form');
+    console.log('Closing login form');
+    
+    setTimeout(() => {
+        loginform.classList.remove('open_login_form');
+        loginform.classList.remove('closing_login_form');
+    }, 500); // Match this with the CSS transition time
+}
+
+
+
+
 // function createEl(el, className, id) {
 //     const elem = document.createElement(el)
 //     if (id) {
