@@ -30,8 +30,8 @@
         </div>
         <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
         <div>
-            <button onclick="openLoginform()">L O G I N    </button>
-            <button onclick="openSlideover()">    C A R T</button>
+            <button onclick="openLoginform()">L O G I N </button>
+            <!-- <button onclick="openSlideover()"> C A R T</button> -->
         </div>
     </div>
 
@@ -44,7 +44,9 @@
             <img class="dripimg" src="/assets/pics/drip (4).jpg" alt="">
         </landingsection1>
         <div style="font-weight: 600;
-            font-size: x-large;">
+            font-size: x-large;
+            padding-left: 1rem;
+            ">
             NEW ARRIVAL
         </div>
         <new style="margin-bottom: 6px;">
@@ -75,16 +77,20 @@
             </div>
         </new>
 
-
-        <footer>
-            <div style="font-weight: 600; padding-bottom: 12px;">
-                KEEP UPDATED
-            </div>
-            <email class="email" style="padding-bottom: 12px;">
-                <input type="email" id="subemail" name="email">
-            </email>
-            <div style="display: flex; justify-items: end;">© DVRK LLC</div>
-        </footer>
+        <div class="llc">
+            <footer>
+                <div style="font-weight: 600; padding-bottom: 12px;">
+                    KEEP UPDATED
+                </div>
+                <p style="font-weight: 300; font-size: x-small; margin-bottom: 1rem;"> SIGN UP TO THE DVRK FOR EXCLUSIVE DISCOUNTS, EARLY PREVIEWS & MORE</p>
+                <email class="email" style="padding-bottom: 12px;">
+                    <input type="email" id="subemail" name="email">
+                    <button id="submitemail" style="color: white;">--)></button>
+                </email>
+                <div style="display: flex; justify-items: end;">© DVRK LLC</div>
+            </footer>
+            <div></div>
+        </div>
     </main>
 
 
@@ -94,7 +100,7 @@
         <div class="content">
             <div class="header">
                 <p>Cart</p>
-                <p class="x"  onclick="closeSlideover()">&times;</p>
+                <p class="x" onclick="closeSlideover()">&times;</p>
             </div>
             <div class="body">
                 <img src="https://robohash.org/1" alt="">
@@ -105,7 +111,7 @@
     </div>
     <div class="login_form" id="login_form">
         <div class="header">
-            <p class="x"  onclick="closeLoginform()">&times;</p>
+            <p class="x" onclick="closeLoginform()">&times;</p>
         </div>
         <div class="bodylogin">
             <p style="font-weight: 700;">Enter your email</p>
@@ -113,7 +119,8 @@
                 <input class="inp" type="email">
             </div>
             <button id="check_login">Login</button>
-            <p style="font-weight: 300; font-size:small; text-align: center;">By logging in you are subscribing our daily anoumcement and deals </p>
+            <p style="font-weight: 300; font-size:small; text-align: center;">By logging in you are subscribing our
+                daily anoumcement and deals </p>
         </div>
     </div>
 
