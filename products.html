@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DVRK</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    </head>
+<body>
+    <div class="header">
+        <div >
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+        </div>
+        <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
+        <div>
+            <button onclick="openLoginform()">L O G I N    </button>
+            <button onclick="openSlideover()">    C A R T</button>
+        </div>
+    </div>
+
+    
+    <main>
+        <content>
+            
+        </content>
+        
+        <footer>
+            <div style="font-weight: 600; padding-bottom: 12px;">
+                KEEP UPDATED
+            </div>
+            <email class="email" style="padding-bottom: 12px;">
+                <input type="email" id="subemail" name="email">
+            </email>
+            <div style="display: flex; justify-items: end;">© DVRK LLC</div>
+        </footer>
+    </main>
+
+
+    <div class="slide_over" id="slide_over">
+        <div class="overlay" onclick="closeSlideover()"></div>
+        <div class="content">
+            <div class="header">
+                <p>Cart</p>
+                <p class="x"  onclick="closeSlideover()">&times;</p>
+            </div>
+            <div class="body">
+                <img src="https://robohash.org/1" alt="">
+                <button>avah</button>
+                <button>xarah</button>
+            </div>
+        </div>
+    </div>
+    <div class="login_form" id="login_form">
+        <div class="header">
+            <p class="x"  onclick="closeLoginform()">&times;</p>
+        </div>
+        <div class="bodylogin">
+            <p style="font-weight: 700;">Enter your email</p>
+            <div>
+                <input class="inp" type="email">
+            </div>
+            <button id="check_login">Login</button>
+            <p style="font-weight: 300; font-size:small; text-align: center;">By logging in you are subscribing our daily anoumcement and deals </p>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
