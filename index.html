@@ -115,14 +115,20 @@
         </div>
         <div class="bodylogin">
             <p style="font-weight: 700;">Enter your email</p>
-            <div>
-                <input class="inp" type="email">
-            </div>
+            <form id="loginform" onsubmit="return false;"> <!-- Prevent form reload -->
+                <div>
+                    <input style="margin-bottom: 12px;" id="email" class="inp" type="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input id="password" class="inp" type="password" placeholder="Password" required>
+                </div>
+            </form>
             <button id="check_login">Login</button>
-            <p style="font-weight: 300; font-size:small; text-align: center;">By logging in you are subscribing our
-                daily anoumcement and deals </p>
+            <p style="font-weight: 300; font-size:small; text-align: center;">By logging in you are subscribing to our
+                daily announcements and deals </p>
         </div>
     </div>
+    
 
     <script src="/script.js"></script>
 </body>

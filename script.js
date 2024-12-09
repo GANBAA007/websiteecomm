@@ -32,6 +32,63 @@ function closeLoginform() {
         loginform.classList.remove('closing_login_form');
     }, 500); // Match this with the CSS transition time
 }
+// Get the form and the button elements
+const loginForm = document.getElementById('loginform');
+const checkLoginButton = document.getElementById('check_login');
+
+// Add event listener for the login button
+checkLoginButton.addEventListener('click', async function(event) {
+    // Prevent the default action (form reload)
+    event.preventDefault();
+
+    // Get the input values
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Validate input
+    if (!email || !password) {
+        alert('Please fill in both fields');
+        return;
+    }
+
+    // Add a loading state
+    checkLoginButton.disabled = true; // Disable the button during the request
+    checkLoginButton.innerText = 'Logging in...';
+
+    try {
+        // Send the login data to the server
+        const response = await fetch('http://localhost:8080/ecomm/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        });
+
+        // Get the response from the server
+        const result = await response.json();
+
+        // Reset the loading state
+        checkLoginButton.disabled = false;
+        checkLoginButton.innerText = 'Login';
+
+        if (response.ok) {
+            alert('Login success: ' + result.token);
+            localStorage.setItem('authToken', result.token); // Store the token in localStorage
+            window.location.href = '/dashboard'; // Redirect after login
+        } else {
+            alert('Login failed: ' + result.error);
+        }
+    } catch (error) {
+        alert('An error occurred: ' + error.message);
+        checkLoginButton.disabled = false;
+        checkLoginButton.innerText = 'Login';
+    }
+});
+
 
 
 
