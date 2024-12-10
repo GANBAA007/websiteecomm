@@ -16,19 +16,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <meta name="referrer" content="no-referrer-when-downgrade">
 </head>
 
 
 <body>
     <div class="header">
-        <div >
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
+        <div>
+            <a href="products.html">P R O D U C T S</a>
         </div>
-        <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
+        <a href="index.html">
+            <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
+        </a>
         <div>
             <button onclick="openLoginform()">L O G I N </button>
             <!-- <button onclick="openSlideover()"> C A R T</button> -->
@@ -82,7 +81,8 @@
                 <div style="font-weight: 600; padding-bottom: 12px;">
                     KEEP UPDATED
                 </div>
-                <p style="font-weight: 300; font-size: x-small; margin-bottom: 1rem;"> SIGN UP TO THE DVRK FOR EXCLUSIVE DISCOUNTS, EARLY PREVIEWS & MORE</p>
+                <p style="font-weight: 300; font-size: x-small; margin-bottom: 1rem;"> SIGN UP TO THE DVRK FOR EXCLUSIVE
+                    DISCOUNTS, EARLY PREVIEWS & MORE</p>
                 <email class="email" style="padding-bottom: 12px;">
                     <input type="email" id="subemail" name="email">
                     <button id="submitemail" style="color: white;">--)></button>
@@ -117,7 +117,8 @@
             <p style="font-weight: 700;">Enter your email</p>
             <form id="loginform" onsubmit="return false;"> <!-- Prevent form reload -->
                 <div>
-                    <input style="margin-bottom: 12px;" id="email" class="inp" type="email" placeholder="Email" required>
+                    <input style="margin-bottom: 12px;" id="email" class="inp" type="email" placeholder="Email"
+                        required>
                 </div>
                 <div>
                     <input id="password" class="inp" type="password" placeholder="Password" required>
@@ -128,7 +129,7 @@
                 daily announcements and deals </p>
         </div>
     </div>
-    
+
 
     <script src="/script.js"></script>
 </body>
