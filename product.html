@@ -27,6 +27,7 @@
             <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
         </a>
         <div>
+            <button style="margin-right: 1rem;" onclick="Logout()"> L O G O U T</button>
             <button onclick="openSlideover()"> C A R T</button>
         </div>
     </div>
@@ -34,7 +35,7 @@
 
     <div id="productDetails" class="product-details"></div>
 
-    <div class="footer">
+    <div style="justify-content: end;" class="footer">
         <footer>
             <div style="font-weight: 600; padding-bottom: 12px;">
                 KEEP UPDATED
@@ -56,10 +57,10 @@
                 <p class="x" onclick="closeSlideover()">&times;</p>
             </div>
             <div id="cartItemsContainer"></div>
-                <!-- Cart items will be inserted here dynamically -->
-            </div>
-            
+            <!-- Cart items will be inserted here dynamically -->
         </div>
+
+    </div>
     </div>
     <script>
         window.onload = fetchProductDetails;
@@ -148,17 +149,32 @@
                 }
 
                 const result = await response.json();
-                alert('Product added to cart!');
+
             } catch (error) {
                 console.error('Error adding to cart:', error);
                 alert('Failed to add product to cart');
             }
         }
+        function checkAuthToken() {
+            const token = localStorage.getItem('authToken');
+
+            // If no token, redirect to index.html
+            if (!token) {
+                console.log("No auth token found. Redirecting to index.html...");
+                window.location.href = 'index.html'; // Adjust the path if needed
+            } else {
+                console.log("Auth token exists. Proceeding to the app...");
+            }
+        }
+
+        // Call the function on page load
+        document.addEventListener('DOMContentLoaded', checkAuthToken);
+
 
         // Call the fetchProductDetails function when the page loads
 
     </script>
-<script src="/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 
 </html>

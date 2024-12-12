@@ -253,3 +253,9 @@ function updateCartUI(cartItems) {
     });
 }
 
+function Logout() {
+    localStorage.removeItem('authToken');
+    window.location.href = 'index.html';
+}
+Logout()
+

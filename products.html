@@ -26,6 +26,7 @@
             <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
         </a>
         <div>
+            <button style="margin-right: 1rem;" onclick="Logout()"> L O G O U T </button>
             <button onclick="openSlideover()"> C A R T</button>
         </div>
     </div>
@@ -62,10 +63,10 @@
                 <p class="x" onclick="closeSlideover()">&times;</p>
             </div>
             <div id="cartItemsContainer"></div>
-                <!-- Cart items will be inserted here dynamically -->
-            </div>
-            
+            <!-- Cart items will be inserted here dynamically -->
         </div>
+
+    </div>
     </div>
 
     <div class="footer">
@@ -77,7 +78,7 @@
                 DISCOUNTS, EARLY PREVIEWS & MORE</p>
             <div class="email">
                 <input type="email" id="subemail" name="email">
-                <button id="submitemail" style="color: white;">--)></button>
+                <button id="submitemail" style="color: white;">--):></button>
             </div>
             <div style="display: flex; justify-items: end;">© DVRK LLC</div>
         </footer>
@@ -122,6 +123,21 @@
 
         // Call fetchProducts when the page loads
         window.onload = fetchProducts;
+        function checkAuthToken() {
+            const token = localStorage.getItem('authToken');
+
+            // If no token, redirect to index.html
+            if (!token) {
+                console.log("No auth token found. Redirecting to index.html...");
+                window.location.href = 'index.html'; // Adjust the path if needed
+            } else {
+                console.log("Auth token exists. Proceeding to the app...");
+            }
+        }
+
+        // Call the function on page load
+        document.addEventListener('DOMContentLoaded', checkAuthToken);
+
 
 
     </script>

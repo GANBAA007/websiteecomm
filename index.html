@@ -28,10 +28,14 @@
         <a href="index.html">
             <img style="justify-self: flex-start; height: 50px; width: 50px;" src="/assets/logo/DVRK(1).png" alt="">
         </a>
-        <div>
-            <button onclick="openLoginform()">L O G I N </button>
-            <!-- <button onclick="openSlideover()"> C A R T</button> -->
+        <div style="display: flex;">
+            <div>
+                <button id="CartBtn" style="margin-right: 1rem;" onclick="openSlideover()"> C A R T</button>
+            </div>
+            <button id="LoginBtn" onclick="openLoginform()">L O G I N </button>
+            <button id="LogoutBtn" onclick="Logout()">L O G O U T</button>
         </div>
+
     </div>
 
     <main>
@@ -98,15 +102,14 @@
     <div class="slide_over" id="slide_over">
         <div class="overlay" onclick="closeSlideover()"></div>
         <div class="content">
-            <div class="header">
+            <div class="cartheader" style="height: 3dvh;">
                 <p>Cart</p>
                 <p class="x" onclick="closeSlideover()">&times;</p>
             </div>
-            <div class="body">
-                <img src="https://robohash.org/1" alt="">
-                <button>avah</button>
-                <button>xarah</button>
+            <div id="cartItemsContainer"></div>
+                <!-- Cart items will be inserted here dynamically -->
             </div>
+            
         </div>
     </div>
     <div class="login_form" id="login_form">
@@ -129,7 +132,27 @@
                 daily announcements and deals </p>
         </div>
     </div>
+    <script>
+        function checkTokenAndToggleLoginButton() {
+            const token = localStorage.getItem('authToken');
+            const loginButton = document.getElementById('LoginBtn'); // Use the variable name consistently
+            const logoutButton = document.getElementById('LogoutBtn');
+            const cartbutton = document.getElementById('CartBtn');
+            // Hide the button if the token exists, otherwise show it
+            if (token) {
+                loginButton.style.display = 'none';
+                logoutButton.style.display = 'block';
+                cartbutton.style.display = 'block';
+            } else {
+                loginButton.style.display = 'block';
+                logoutButton.style.display = 'none';
+                cartbutton.style.display = 'none';
+            }
+        }
 
+        // Call the function on page load
+        document.addEventListener('DOMContentLoaded', checkTokenAndToggleLoginButton);
+    </script>
 
     <script src="/script.js"></script>
 </body>
